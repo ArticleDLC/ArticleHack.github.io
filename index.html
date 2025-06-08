@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ART1CL3 DLC</title>
+  <style>
+    body {
+      background-color: #1a1a1a;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+    h1 {
+      font-size: 4em;
+      color: #f4a261;
+      margin-top: 40px;
+      text-shadow: 0 0 10px #f4a261, 0 0 20px #f4a261, 0 0 30px #e76f51;
+      text-align: center;
+      font-weight: bold;
+    }
+    .buttons {
+      margin: 30px 0;
+      padding: 20px;
+      background-color: #2a2a2a;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+    button {
+      background-color: #f4a261;
+      border: none;
+      padding: 15px 30px;
+      margin: 10px 0;
+      font-size: 1.2em;
+      color: #fff;
+      cursor: pointer;
+      width: 250px;
+      border-radius: 5px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(244, 162, 97, 0.5);
+      transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #e76f51;
+      box-shadow: 0 0 15px rgba(231, 111, 81, 0.7);
+    }
+    .footer {
+      margin-top: auto;
+      padding: 20px;
+      background-color: #2a2a2a;
+      width: 100%;
+      text-align: center;
+    }
+    .footer-item {
+      margin: 10px 0;
+      cursor: pointer;
+      position: relative;
+      padding: 15px;
+      background-color: #333;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s ease;
+    }
+    .footer-item:hover {
+      background-color: #3a3a3a;
+    }
+    .content {
+      display: none;
+      margin-top: 10px;
+      padding: 15px;
+      background-color: #2a2a2a;
+      border-radius: 5px;
+      color: #ddd;
+    }
+    .footer-item.active .content {
+      display: block;
+    }
+    .creator {
+      font-size: 0.7em;
+      color: #aaa;
+      margin-top: 10px;
+    }
+    @media (max-width: 640px) {
+      h1 {
+        font-size: 2.5em;
+      }
+      button {
+        width: 200px;
+      }
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const footerItems = document.querySelectorAll('.footer-item');
+      footerItems.forEach(item => {
+        item.addEventListener('click', () => {
+          item.classList.toggle('active');
+          footerItems.forEach(otherItem => {
+            if (otherItem !== item) otherItem.classList.remove('active');
+          });
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>ART1CL3 DLC</h1>
+  <div class="buttons">
+    <a href="https://t.me/ArticleDLC"><button>Скачать DLC</button></a>
+    <a href="https://t.me/ArticleHack"><button>Следить за разработкой</button></a>
+  </div>
+  <div class="footer">
+    <div class="footer-item">
+      <p>Безопасен ли чит?</p>
+      <div class="content">
+        Наш чит разработан с учетом безопасности, чтобы минимизировать риски бана. Однако всегда используйте его на свой страх и риск, следуя инструкциям.
+      </div>
+    </div>
+    <div class="footer-item">
+      <p>Есть ли платная версия?</p>
+      <div class="content">
+        Ее нету, но в скором времени запустим 2 версии: платную и бесплатную. Платная — быстрее обновляется, больше функций. Бесплатная — обновляется медленнее, меньше функций.
+      </div>
+    </div>
+  </div>
+  <div class="creator">создатель сайта - cloudixx aka. kallcode</div>
+</body>
+</html>
